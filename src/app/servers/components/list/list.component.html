@@ -1,0 +1,17 @@
+<div
+  class="server-details"
+  infiniteScroll
+  (scrolled)="onScroll()"
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  [scrollWindow]="true"
+  *ngIf="serverCount !== 0; else noservers"
+>
+  <server-info
+    [serverDetails]="server"
+    *ngFor="let server of servers"
+  ></server-info>
+</div>
+<ng-template #noservers>
+  <div class="no-servers">No servers found.</div>
+</ng-template>

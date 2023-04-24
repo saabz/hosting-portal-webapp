@@ -1,0 +1,69 @@
+@import "styles.scss";
+
+.filter-wrapper {
+  box-sizing: border-box;
+  padding: 5px 12px;
+  margin: 5px 27px;
+  .control-name {
+    margin-top: 7px;
+    font-weight: bold;
+  }
+  .filter-button-wrapper {
+    text-align: end;
+    .filter-button {
+      padding: 5px 40px;
+      border: 1px solid $color-grey-3;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: $color-white-1;
+      background-color: $color-blue-8;
+    }
+  }
+  .slider-input-container {
+    margin-top: 7px;
+  }
+}
+.form-control-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  .field-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 80px;
+    label {
+      display: inline-block;
+      margin: 3px;
+    }
+    input,
+    select {
+      padding: 3px;
+      margin: 3px;
+      display: inline-block;
+    }
+    .model-input {
+      min-width: 220px;
+    }
+    .slider-input {
+      width: 80% !important;
+      height: 0.7rem !important;
+    }
+    .range-display {
+      display: inline-block;
+      margin-left: 7px;
+      font-weight: bold;
+    }
+    .drop-down {
+      width: 90%;
+      height: 32px;
+      padding-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "styles.scss";
+h4 {
+  margin-top: 5px;
+}
+.server-details {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  color: $color-black-2;
+}
+
+.no-servers {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .server-details {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}

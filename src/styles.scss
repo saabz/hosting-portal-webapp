@@ -1,0 +1,45 @@
+// Global variables
+
+// Colors
+$color-white-1: #ffffff;
+
+$color-grey-1: #f8f8f9;
+$color-grey-2: #efefef;
+$color-grey-3: grey;
+$color-grey-4: rgb(85, 85, 85);
+
+$color-black-1: #000000;
+$color-black-2: rgb(51, 51, 51);
+$color-black-3: rgb(41, 39, 39);
+
+$color-orange-1: rgb(238, 64, 11);
+$color-orange-2: rgb(252, 164, 0);
+$color-orange-3: #f68b1f;
+
+$color-blue-1: blue;
+$color-blue-2: #0d3dcf;
+$color-blue-3: rgb(52, 52, 202);
+$color-blue-4: #3766a5;
+$color-blue-5: #5685c4;
+$color-blue-6: #0096d6;
+$color-blue-7: #4267b2;
+$color-blue-8: #1b74e4;
+
+// Fonts
+$font-family-1: "Courier New", Courier, monospace;
+$font-family-2: verdana, "sans-serif";
+
+$font-size-1: 16px;
+
+// Global styles
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family-1;
+  font-size: $font-size-1;
+  background-color: $color-grey-2 !important;
+  color: $color-black-2;
+}

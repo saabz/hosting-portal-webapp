@@ -1,0 +1,69 @@
+<div class="filter-wrapper">
+  <form [formGroup]="filterFormGroup">
+    <h4>Filters</h4>
+
+    <div class="control-name">Model:</div>
+    <div class="form-control-wrapper">
+      <div class="field-wrapper">
+        <input
+          class="form-control model-input"
+          type="text"
+          name="model"
+          id="model"
+          formControlName="model"
+          value=""
+        />
+      </div>
+    </div>
+
+    <div class="control-name">Storage:</div>
+    <div class="form-control-wrapper">
+      <ngx-slider
+        formControlName="storage"
+        [(value)]="minValue"
+        [(highValue)]="maxValue"
+        [options]="options"
+      ></ngx-slider>
+    </div>
+
+    <div class="control-name">RAM:</div>
+    <div class="form-control-wrapper">
+      <div class="field-wrapper" *ngFor="let memoryUnit of memoryUnits">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          [value]="memoryUnit.value"
+          id="RAM-{{ memoryUnit.description }}"
+          (change)="checkboxChangeHandler($event)"
+        />
+        <label class="form-check-label" for="RAM-{{ memoryUnit.description }}">
+          {{ memoryUnit.description }}
+        </label>
+      </div>
+    </div>
+
+    <div class="control-name">Hard Disk Type</div>
+    <div class="field-wrapper">
+      <select class="form-select p-1 ps-2" formControlName="hardDiskType">
+        <option selected value="">Select Hard Disk Type</option>
+        <option value="SAS">SAS</option>
+        <option value="SATA">SATA</option>
+        <option value="SSD">SSD</option>
+      </select>
+    </div>
+
+    <div class="control-name">Location</div>
+    <div class="field-wrapper">
+      <select class="form-select p-1 ps-2" formControlName="location">
+        <option selected value="">Select Location</option>
+        <option *ngFor="let location of locations" [value]="location">
+          {{ location }}
+        </option>
+      </select>
+    </div>
+
+    <div class="filter-button-wrapper">
+      <button class="filter-button" (click)="applyFilters()">Filter</button>
+    </div>
+  </form>
+</div>

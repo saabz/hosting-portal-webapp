@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      <servers-filter></servers-filter>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <servers-list
+        [serverCount]="serverCount"
+        [servers]="servers$"
+        (scrolledDown)="handlePageScroll()"
+      ></servers-list>
+    </div>
+  </div>
+</div>
